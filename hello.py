@@ -4,9 +4,14 @@ import sys
 
 def full_name(first_name, last_name):
     """returns the full name"""
-    name = f"{first_name.capitalize()}{last_name.capitalize()}"
-    
-    return name
+    parts = []
+    if first_name:
+        parts.append(first_name.capitalize())
+    if last_name:
+        parts.append(last_name.capitalize())
+    return " ".join(parts)
+
+
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
